@@ -1,0 +1,214 @@
+\documentclass[a5paper, 10pt]{article}
+
+% Текст
+\usepackage[utf8]{inputenc} % UTF-8 кодировка
+\usepackage[russian]{babel} % Русский язык
+\usepackage{indentfirst} % красная строка в первом параграфе в главе
+% Отображение страниц
+\usepackage{geometry} % размеры листа и отступов
+\geometry{
+	left=12mm,
+	top=25mm,
+	right=15mm,
+	bottom=17mm,
+	marginparsep=0mm,
+	marginparwidth=0mm,
+	headheight=10mm,
+	headsep=7mm,
+	nofoot}
+\usepackage{afterpage,fancyhdr} % настройка колонтитулов
+\pagestyle{fancy}
+\fancypagestyle{style}{ % создание нового стиля style
+	\fancyhf{} % очистка колонтитулов
+	\fancyhead[LO, RE]{Домашняя работа №3} % название документа наверху
+	%\fancyhead[RO, LE]{\leftmark} % название section наверху
+	\fancyfoot[RO, LE]{\thepage} % номер страницы справа внизу на нечетных и слева внизу на четных
+	\renewcommand{\headrulewidth}{0.25pt} % толщина линии сверху
+	\renewcommand{\footrulewidth}{0pt} % толцина линии снизу
+}
+\fancypagestyle{plain}{ % создание нового стиля plain -- полностью пустого
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{title}{ % создание нового стиля title -- для титульной страницы
+	\fancyhf{}
+	\fancyhead[C]{{\footnotesize
+			Министерство образования и науки Российской Федерации\\
+			Федеральное государственное автономное образовательное учреждение высшего образования
+	}}
+	\fancyfoot[C]{{\large 
+			Санкт-Петербург, 2023-2024
+	}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+% Математика
+\usepackage{epigraph}
+\usepackage{cancel}
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % Набор пакетов для математических текстов
+%\usepackage{dmvnbase} % мехматовский пакет latex-сокращений
+\usepackage{cancel} % зачеркивание для сокращений
+% Рисунки и фигуры
+\usepackage[pdftex]{graphicx} % вставка рисунков
+\usepackage{wrapfig, subcaption} % вставка фигур, обтекая текст
+\usepackage{caption} % для настройки подписей
+\captionsetup{figurewithin=none,labelsep=period, font={small,it}} % настройка подписей к рисункам
+% Рисование
+\usepackage{tikz} % рисование
+\usepackage{circuitikz}
+\usepackage{pgfplots} % графики
+% Таблицы
+\usepackage{multirow} % объединение строк
+\usepackage{multicol} % объединение столбцов
+% Остальное
+\usepackage[unicode, pdftex]{hyperref} % гиперссылки
+\usepackage{enumitem} % нормальное оформление списков
+\setlist{itemsep=0.15cm,topsep=0.15cm,parsep=1pt} % настройки списков
+% Теоремы, леммы, определения...
+\theoremstyle{definition}
+\newtheorem{Def}{Определение}
+\newtheorem*{Axiom}{Аксиома}
+\theoremstyle{plain}
+\newtheorem{Th}{Теорема}
+\newtheorem{Lem}{Лемма}
+\newtheorem{Cor}{Следствие}
+\newtheorem{Ex}{Пример}
+\theoremstyle{remark}
+\newtheorem*{Note}{Замечание}
+\newtheorem*{Solution}{Решение}
+\newtheorem*{Proof}{Доказательство}
+% Свои команды
+\newcommand{\comb}[1]{\left[\hspace{-4pt}\begin{array}{l}#1\end{array}\right.\hspace{-5pt} } % совокупность уравнений
+% Титульный лист
+\usepackage{csvsimple-l3}
+\newcommand*{\titlePage}{
+	\thispagestyle{title}
+	\begingroup
+	\begin{center}
+		%		{\footnotesize
+			%			Министерство образования и науки Российской Федерации\\
+			%			Федеральное государственное автономное образовательное учреждение высшего образования
+			%		}
+		%		
+		\vspace*{6ex}
+		
+		{\small
+			САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО	
+		}
+		
+		\vspace*{2ex}
+		
+		{\normalsize
+			Факультет систем управления и робототехники
+		}
+		
+		\vspace*{15ex}
+		
+		{\Large \bfseries 
+			Домашняя работа №3
+		}
+\vspace*{3ex}
+		
+		{ \Large 
+			Интегрирующий множитель и замены в ДУ 1-го порядка
+		}
+\vspace*{3ex}
+		
+		{  \bfseries 
+			по дисциплине Дифференциальные уравнения
+		}
+	\end{center}
+	\vspace*{20ex}
+	\begin{flushright}
+		{\large 
+			\underline{Выполнила}: студентка гр. \textbf{R3238}\\
+			\begin{flushright}
+				\textbf{Нечаева А. А.}\\
+			\end{flushright}
+		}
+		
+		\vspace*{5ex}
+		
+		{\large 
+			\underline{Преподаватель}: \textit{Бойцев Антон Александрович}
+		}
+	\end{flushright}	
+	\newpage
+	\setcounter{page}{1}
+	\endgroup}
+
+\begin{document}
+	\titlePage
+	\pagestyle{style}
+	
+\newpage
+\epigraph{Трудность решения в какой-то мере входит в само понятие задачи: там, где нет трудности, нет и задачи.}{Д. Пойа}
+
+\section{Решить уравнение, подобрав интегрирующий множитель}
+\begin{equation*}
+\left( 2xy + x^2y+\frac{y^3}{3} \right)dx + \left(x^2 + y^2 \right)dy = 0
+\end{equation*}
+Записать общий интеграл уравнения в виде $F(x, y) = C$.\\\\
+\textit{\textbf{Решение:}}\\
+Запишем уравнение для нахождения интегрирующего множителя
+\begin{equation*}
+\mu'_y \left( 2xy + x^2y+\frac{y^3}{3} \right) + \mu \left( 2xy + x^2y+\frac{y^3}{3} \right)'_y = \mu'_x \left(x^2 + y^2 \right) + \mu \left(x^2 + y^2 \right)'_x
+\end{equation*}
+\begin{equation*}
+\mu'_y \left( 2xy + x^2y+\frac{y^3}{3} \right) + \mu \left(\bcancel{ 2x} + x^2+ y^2 \right) = \mu'_x \left(x^2 + y^2 \right) + \bcancel{2x \mu} 
+\end{equation*}
+\begin{equation*}
+\mu'_y \left( 2xy + x^2y+\frac{y^3}{3} \right) + \mu \left(x^2+ y^2 \right) = \mu'_x \left(x^2 + y^2 \right)
+\end{equation*}
+Будем искать частное решение в виде $\mu = \mu (x)$, тогда $\mu'_y = 0$.
+\begin{equation*}
+ \mu \left(x^2+ y^2 \right) = \mu'_x \left(x^2 + y^2 \right) \left| : (x^2 + y^2) \neq 0 \right.
+\end{equation*}
+\begin{equation*}
+ \frac{d\mu}{dx} = \mu
+\end{equation*}
+\begin{equation*}
+\int \frac{d\mu}{\mu} = \int dx
+\end{equation*}
+\begin{equation*}
+\ln | \mu | = x + C
+\end{equation*}
+Интегрирующий множитель:
+\begin{equation*}
+ \mu = e^x
+\end{equation*}
+Домножим исходное уравнение на найденный интегрирующий множитель, получим:
+\begin{equation*}
+e^x \left( 2xy + x^2y+\frac{y^3}{3} \right)dx + e^x \left(x^2 + y^2 \right)dy = 0
+\end{equation*}
+Покажем, что полученное уравнение является уравнением в полных дифференциалах:
+\begin{equation*}
+P(x, y) = e^x \left( 2xy + x^2y+\frac{y^3}{3} \right)
+\end{equation*}
+\begin{equation*}
+Q(x, y) =  e^x \left(x^2 + y^2 \right)
+\end{equation*}
+\begin{equation*}
+P'_y= e^x \left( 2x + x^2+y^2 \right)
+\end{equation*}
+\begin{equation*}
+Q'_x =  e^x \left(x^2 + y^2 \right) + e^x \left(2x \right)  = e^x \left(2x + x^2 + y^2 \right) 
+\end{equation*}
+\begin{equation*}
+P'_y= Q'_x 
+\end{equation*}
+Значит, полученное уравнение является уравнением в полных дифференциалах.
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
