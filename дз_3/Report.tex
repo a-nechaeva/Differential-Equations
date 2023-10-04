@@ -229,7 +229,7 @@ C = const
 \end{equation*}
 При $x = 0, y = 0$ решение входит в общий интеграл.\\\\
 \textit{\textbf{Ответ:}} $ e^x \left( x^2 y + \frac{y^3}{3} \right) = C$ -- общий интеграл.
-
+\newpage
 \section{Решить уравнение, подобрав интегрирующий множитель}
 \begin{equation*}
 \left(2x^3y^2 - y \right)dx + \left(2x^2y^3-x \right)dy = 0
@@ -297,11 +297,105 @@ C(x) = x^2 + C
 y^2 + \frac{1}{xy} + x^2 =  C
 \end{equation*}
 \textit{\textbf{Ответ:}} $ y^2 + \frac{1}{xy} + x^2 =  C$ -- общий интеграл.
-
+\newpage
 \section{Решить уравнение, подобрав замену}
 \begin{equation*}
 y' = \frac{x}{y} \left( 1 + e^{5x^2+3y^2} \right)
 \end{equation*}
+Записать ответ в виде $y^2 = f(x, c)$\\\\
+\textit{\textbf{Решение:}}\\
+\begin{equation*}
+y'y = x \left( 1 + e^{5x^2+3y^2} \right)\, ,\,  y \neq 0
+\end{equation*}
+\begin{equation*}
+(3y^2)' =6 x \left( 1 + e^{5x^2+3y^2} \right)
+\end{equation*}
+Замена: $3y^2 = p$
+\begin{equation*}
+p' =6 x \left( 1 + e^{5x^2+p} \right)
+\end{equation*}
+\begin{equation*}
+p' =6 x \left( 1 + e^{5x^2}e^{p} \right)  \, \left| \right. : e^p
+\end{equation*}
+\begin{equation*}
+\frac{p'}{e^p} =6 x \left( \frac{1}{e^p} + e^{5x^2} \right)  
+\end{equation*}
+Заметим: $\left( \frac{1}{e^p} \right)'  = -\frac{p'}{e^{p}} $\\
+\begin{equation*}
+-\left( \frac{1}{e^p} \right)' =6 x \left( \frac{1}{e^p} + e^{5x^2} \right)  
+\end{equation*}
+Замена: $t = \frac{1}{e^p}$
+\begin{equation*}
+-\left( t \right)' =6 x \left( t + e^{5x^2} \right)  
+\end{equation*}
+\begin{equation*}
+\left( t \right)' + 6 x t + 6x e^{5x^2} = 0
+\end{equation*}
+Получили линейное уравнение относительно $t$ вида:
+\begin{equation*}
+y' +p(x)y=q(x)
+\end{equation*}
+Решим уравнение \textit{методом Бернулли}:\\
+Подстановка $t = uv \, , \, t' = u'v + uv'$:
+\begin{equation*}
+ u'v + uv' + 6 x uv + 6x e^{5x^2} = 0
+\end{equation*}
+\begin{equation*}
+ u'v + u(v' + 6 x v) + 6x e^{5x^2} = 0
+\end{equation*}
+\begin{equation*}
+ \begin{cases}
+   v' + 6 x v = 0\\
+   u'v = -  6x e^{5x^2}
+ \end{cases}
+\end{equation*}
+Сначала вычислим функцию $v$:
+\begin{equation*}
+   v' + 6 x v = 0
+\end{equation*}
+
+\begin{equation*}
+   \frac{dv}{dx} = -6xv
+\end{equation*}
+
+\begin{equation*}
+  \int  \frac{dv}{v} = -6 \int x dx 
+\end{equation*}
+
+\begin{equation*}
+  \ln | v |= -3 x^2 + C
+\end{equation*}
+В качестве функции $v$ получим:
+\begin{equation*}
+   v = e^{ -3 x^2 }
+\end{equation*}
+Подставляем найденную функцию во второе уравнение системы:
+\begin{equation*}
+   u' e^{ -3 x^2 }= - 6x e^{5x^2}
+\end{equation*}
+\begin{equation*}
+ \int  du = - 6 \int x e^{8x^2} dx
+\end{equation*}
+Отдельно вычислим интеграл $ \int x e^{8x^2} dx$, замена $ x^2 = z\, , dz = 2xdx$:
+\begin{equation*}
+ \int x e^{8x^2} dx = \frac{1}{2} \int e^{8z}dz = \frac{e^{8z}}{16}  + C = \frac{e^{8x^2}}{16}  + C
+\end{equation*}
+\begin{equation*}
+ u = - 6 \frac{e^{8x^2}}{16}  + C =  - 3 \frac{e^{8x^2}}{8}  + C
+\end{equation*}
+Выразим функцию $t$:
+\begin{equation*}
+ t = uv = e^{ -3 x^2 } \left(  - 3 \frac{e^{8x^2}}{8}  + C \right)
+\end{equation*}
+Выразим функцию $p$:
+\begin{equation*}
+ p = \ln \frac{1}{t} = - \ln \left(   e^{ -3 x^2 } \left(  - 3 \frac{e^{8x^2}}{8}  + C \right)  \right)
+\end{equation*}
+Выразим $y^2$:
+\begin{equation*}
+y^2 = \frac{p}{3} = -\frac{1}{3}\ln \left(   e^{ -3 x^2 } \left(  - 3 \frac{e^{8x^2}}{8}  + C \right)  \right) = x^2 - \frac{1}{3}\ln \left(  - 3 \frac{e^{8x^2}}{8}  + C  \right)
+\end{equation*}
+\textit{\textbf{Ответ:}} $y^2 =  x^2 - \frac{1}{3}\ln \left(  - 3 \frac{e^{8x^2}}{8}  + C  \right)$
 \end{document}
 
 
