@@ -197,7 +197,111 @@ Q'_x =  e^x \left(x^2 + y^2 \right) + e^x \left(2x \right)  = e^x \left(2x + x^2
 \begin{equation*}
 P'_y= Q'_x 
 \end{equation*}
-Значит, по признаку полученное уравнение является уравнением в полных дифференциалах.
+Значит, по признаку полученное уравнение является уравнением в полных дифференциалах и имеет вид:
+\begin{equation*}
+\frac{\partial F}{\partial x} dx + \frac{\partial F}{\partial y} dy = 0
+\end{equation*}
+Проведем частное интегрирование по $y$:
+\begin{equation*}
+F = \int  e^x \left(x^2 + y^2 \right)dy =  e^x \left( x^2 y + \frac{y^3}{3} \right) + C =   e^x \left( x^2 y + \frac{y^3}{3} \right) + C(x)
+\end{equation*}
+Продифференцируем полученное выражение по $x$:
+\begin{equation*}
+\frac{\partial F}{\partial x} = \left( e^x \left( x^2 y + \frac{y^3}{3} \right) + C(x) \right)'_x =  e^x \left( x^2 y + \frac{y^3}{3} \right) + 2xy e^x+ C'_x
+\end{equation*}
+Также:
+\begin{equation*}
+\frac{\partial F}{\partial x} =  e^x \left( 2xy + x^2y+\frac{y^3}{3} \right)
+\end{equation*}
+Приравняем 2 выражения выше:
+
+\begin{equation*}
+e^x \left( 2xy + x^2y+\frac{y^3}{3} \right)  =  e^x \left( x^2 y + \frac{y^3}{3} \right) + 2xy e^x+ C'_x
+\end{equation*}
+\begin{equation*}
+2xye^x + x^2ye^x+\frac{y^3}{3} e^x  =  x^2 ye^x + \frac{y^3}{3}e^x  + 2xy e^x+ C'_x
+\end{equation*}
+\begin{equation*}
+C'_x = 0
+\end{equation*}
+\begin{equation*}
+C = const
+\end{equation*}
+При $x = 0, y = 0$ решение входит в общий интеграл.\\\\
+\textit{\textbf{Ответ:}} $ e^x \left( x^2 y + \frac{y^3}{3} \right) = C$ -- общий интеграл.
+
+\section{Решить уравнение, подобрав интегрирующий множитель}
+\begin{equation*}
+\left(2x^3y^2 - y \right)dx + \left(2x^2y^3-x \right)dy = 0
+\end{equation*}
+Записать общий интеграл уравнения в виде $F(x, y) = C$.\\\\
+\textit{\textbf{Решение:}}\\
+Попробуем преобразовать выражение так, чтобы получить уравнение в полных дифференциалах:
+\begin{equation*}
+\left(2x^3y^2 - y \right)dx + \left(2x^2y^3-x \right)dy = 0  \left| \right. : x^2y^2 \neq 0
+\end{equation*}
+\begin{equation*}
+\left(2x - \frac{1}{x^2y} \right)dx + \left(2y-\frac{1}{xy^2} \right)dy = 0 
+\end{equation*}
+\begin{equation*}
+P(x, y) = 2x - \frac{1}{x^2y}
+\end{equation*}
+\begin{equation*}
+Q(x, y) = 2y-\frac{1}{xy^2} 
+\end{equation*}
+\begin{equation*}
+P'_y = \frac{1}{x^2y^2}
+\end{equation*}
+
+\begin{equation*}
+Q'_x = \frac{1}{x^2y^2} 
+\end{equation*}
+\begin{equation*}
+P'_y= Q'_x 
+\end{equation*}
+Значит, по признаку полученное уравнение является уравнением в полных дифференциалах и имеет вид:
+\begin{equation*}
+\frac{\partial F}{\partial x} dx + \frac{\partial F}{\partial y} dy = 0
+\end{equation*}
+Проведем частное интегрирование по $y$:
+\begin{equation*}
+F = \int  \left(2y-\frac{1}{xy^2} \right)  dy = y^2 + \frac{1}{xy} + C(x)
+\end{equation*}
+Продифференцируем полученное выражение по $x$:
+\begin{equation*}
+\frac{\partial F}{\partial x} = \left(  y^2 + \frac{1}{xy} + C(x)  \right)'_x =  -\frac{1}{x^2y} + C'_x
+\end{equation*}
+Также:
+\begin{equation*}
+\frac{\partial F}{\partial x} =  2x - \frac{1}{x^2y}
+\end{equation*}
+Приравняем 2 выражения выше:
+
+\begin{equation*}
+2x - \bcancel{\frac{1}{x^2y}}  =   -\bcancel{\frac{1}{x^2y}} + C'_x
+\end{equation*}
+\begin{equation*}
+ C'_x = 2x
+\end{equation*}
+\begin{equation*}
+\frac{dC}{dx} = 2x
+\end{equation*}
+\begin{equation*}
+\int dC= \int 2x dx
+\end{equation*}
+\begin{equation*}
+C(x) = x^2 + C
+\end{equation*}
+Получим общий интеграл:
+\begin{equation*}
+y^2 + \frac{1}{xy} + x^2 =  C
+\end{equation*}
+\textit{\textbf{Ответ:}} $ y^2 + \frac{1}{xy} + x^2 =  C$ -- общий интеграл.
+
+\section{Решить уравнение, подобрав замену}
+\begin{equation*}
+y' = \frac{x}{y} \left( 1 + e^{5x^2+3y^2} \right)
+\end{equation*}
 \end{document}
 
 
