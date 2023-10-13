@@ -151,15 +151,89 @@
 \end{equation*}
 к однородному и решить его. Записать ответ в виде $F(x, y) = C$.\\
 \textit{\textbf{Решение:}}\\
-Пусть $x=z^m$, тогда $x'=mz'z^{m-1}$, запишем получившееся уравнение:
+Пусть $x=z^m, \, y = z$, тогда $x'=mz'z^{m-1}$, запишем получившееся уравнение:
 \begin{equation*}
-(z^my^2+1)ymz'z^{m-1} + 2z^m = 0, \, z^m > 0, \, y > 0
+(z^mz^2+1)zmz'z^{m-1} + 2z^m = 0, \, z^m > 0, \, z > 0
 \end{equation*}
 \begin{equation*}
-mz'z^{2m-1}y^3+ymz'z^{m-1} + 2z^m = 0
+mz'z^{2m+2}+mz'z^{m} + 2z^m = 0
+\end{equation*}
+\begin{equation*}
+mz'z^{2m+2}= -(mz' + 2)z^m
+\end{equation*}
+\begin{equation*}
+2m+2 = m \to m = -2
+\end{equation*}
+Таким образом, $x = z^{-2}, \, x' = -2z' z^{-3}$, подставим в исходное уравнение, получим:
+\begin{equation*}
+-2z' z^{-3}( z^{-2}y^2+1)y + 2 z^{-2} = 0 \, \left| \right. : -2z^{-2} \neq 0
+\end{equation*}
+\begin{equation*}
+z' z^{-1}( z^{-2}y^2+1)y -1 = 0 
+\end{equation*}
+\begin{equation*}
+z' z^{-3}y^3+ z' z^{-1}y -1 = 0 
+\end{equation*}
+Полученное уравнение является однородным, убедимся, подставив $z = \lambda z, \, y = \lambda y$:
+\begin{equation*}
+ F( \lambda z,\, \lambda y ) = z' \lambda^{-3} z^{-3} \lambda^3y^3+ z' \lambda^{-1}z^{-1} \lambda y -1 =  \lambda^0  F(  z,\,  y )
+\end{equation*}
+Решаем уравнение:
+\begin{equation*}
+z'  z^{-1}y(z^{-2}y^2+ 1) -1 = 0 
+\end{equation*}
+Подстановка: $z = ty, \, z' = t'y + t$
+\begin{equation*}
+(t'y + t)  (ty)^{-1}y((ty)^{-2}y^2+ 1) -1 = 0 
+\end{equation*}
+\begin{equation*}
+(t'y + t) t^{-1}(t^{-2}+ 1) -1 = 0 
+\end{equation*}
+\begin{equation*}
+t'y + t= \frac{t}{t^{-2}+ 1}, \, \, t^{-2}+ 1 \neq 0 \, (\textit{из условия всегда выполнено})
+\end{equation*}
+\begin{equation*}
+t'y = \frac{t}{t^{-2}+ 1} - t
+\end{equation*}
+\begin{equation*}
+\frac{dt}{dy}y = \frac{t}{t^{-2}+ 1} - t
+\end{equation*}
+\begin{equation*}
+\frac{dt}{dy}y = \frac{t - t^{-1}- t }{t^{-2}+ 1} 
+\end{equation*}
+\begin{equation*}
+\frac{dt}{dy}y = \frac{- t^{-1}}{t^{-2}+ 1} 
+\end{equation*}
+\begin{equation*}
+-t(t^{-2}+ 1) \, dt  = \frac{dy}{y}
+\end{equation*}
+\begin{equation*}
+-(t^{-1} + t) \, dt  = \frac{dy}{y}
+\end{equation*}
+\begin{equation*}
+- \ln t - \frac{t^2}{2}  = \ln y + C
+\end{equation*}
+\begin{equation*}
+- \ln \frac{z}{y} - \frac{z^2}{2y^2}  = \ln y + C
+\end{equation*}
+\begin{equation*}
+- \ln z +  \ln y - \frac{z^2}{2y^2}  = \ln y + C
 \end{equation*}
 
-\textit{\textbf{Ответ:}}
+\begin{equation*}
+- \ln z  - \frac{z^2}{2y^2}  =  C
+\end{equation*}
+Обратная замена: $x = z^{-2} \to z = \frac{1}{\sqrt{x}}$
+\begin{equation*}
+- \ln \frac{1}{\sqrt{x}}   - \frac{1}{2xy^2}  =  C
+\end{equation*}
+\begin{equation*}
+ \ln \sqrt{x}   - \frac{1}{2xy^2}  =  C
+\end{equation*}
+
+\textit{\textbf{Ответ:}} $\ln \sqrt{x}   - \frac{1}{2xy^2}  =  C$
+
+
 
 \newpage
 \section{}
