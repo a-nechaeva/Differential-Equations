@@ -301,15 +301,144 @@ C  =  - \ln ^{-1} x + A, \, A = const
 
 \newpage
 \section{}
-Привести уравнение Риккати к линейному. решить полученное линейное уравнение, используя метод интегрирующего множителя.\\
+Привести уравнение Риккати к линейному. Решить полученное линейное уравнение, используя метод интегрирующего множителя.\\
 Записать ответ в виде $F(x, y) = C$.
 \begin{equation*}
 xy' = x^3 + (1 - 2x^2)y + xy^2
 \end{equation*}
 \textit{\textbf{Решение:}}\\
+Найдем частное решение вида $y = Cx$:
+\begin{equation*}
+x \left(  Cx \right)' = x^3 + (1 - 2x^2) Cx + x\left(  Cx \right)^2
+\end{equation*}
+\begin{equation*}
+x C = x^3 + (1 - 2x^2) Cx + x^3C^2
+\end{equation*}
+\begin{equation*}
+x C = x^3 + Cx - 2Cx^3 + x^3C^2
+\end{equation*}
+\begin{equation*}
+x^3 - 2Cx^3 + x^3C^2 = 0
+\end{equation*}
+\begin{equation*}
+1 - 2C + C^2 = 0,  \, \, x \neq 0
+\end{equation*}
+\begin{equation*}
+\left(1 - C \right)^2 = 0 \to C = 1
+\end{equation*}
+Частное решение  $y = x$, замена $y = x + z$:
+\begin{equation*}
+x(z' + 1) = x^3 + (1 - 2x^2)(x + z) + x(x + z)^2
+\end{equation*}
+\begin{equation*}
+xz' + x = x^3 + x - 2x^3 + z - 2zx^2 + x^3 -2zx^2 +x z^2
+\end{equation*}
+\begin{equation*}
+xz'  =  z - 4zx^2 +x z^2
+\end{equation*}
+\begin{equation*}
+xz'  =  z (1 - 4x^2) +x z^2 \, \left| \right. : x \neq 0 
+\end{equation*}
+\textit{Заметим, что x = 0 не является решением уравнения, т.к. не обращает его в тождество}.
+\begin{equation*}
+z'  =  \frac{z}{x}(1 - 4x^2) + z^2 
+\end{equation*} 
+Получено уравнение Бернулли вида $y' = q(x)y + p(x) y^n$.
+\begin{equation*}
+z'  =  \frac{z}{x}(1 - 4x^2) + z^2  \, \left| \right. :  z^2 \neq 0 
+\end{equation*} 
+Заметим, что $z = 0$ -- тоже решение.
+\begin{equation*}
+ \frac{z'}{ z^2}  =  \frac{1}{zx}(1 - 4x^2) + 1 
+\end{equation*} 
+Замена: $t = \frac{1}{z}$ и $t' = - \frac{z'}{z^2}$:
+\begin{equation*}
+-t'  =  \frac{t}{x}(1 - 4x^2) + 1 
+\end{equation*} 
+Получено линейное уравнение. Решим его методом вариации произвольной постоянной:
+\begin{equation*}
+t'  =  \frac{t}{x}( 4x^2 - 1) 
+\end{equation*} 
+\begin{equation*}
+ \frac{dt}{dx}  =  \frac{t}{x}( 4x^2 - 1) 
+\end{equation*} 
+\begin{equation*}
+ \frac{dt}{t}  = ( 4x^2 - 1) \frac{dx}{x} \, \left| \right. :  t \neq 0 
+\end{equation*} 
+Заметим, что $t = 0$ -- тоже решение.
+\begin{equation*}
+ \int \frac{dt}{t}  =  4 \int x dx -  \int \frac{dx}{x} 
+\end{equation*} 
+\begin{equation*} 
+ \ln |t|  =  2 x^2  -  \ln |x| + \ln C
+\end{equation*} 
+\begin{equation*} 
+ \ln |t|  =  2 x^2  -  \ln Cx
+\end{equation*} 
+\begin{equation*} 
+ \ln |t|  = \ln e^{ 2 x^2 } -  \ln Cx
+\end{equation*} 
+\begin{equation*} 
+ \ln |t|  = \ln \frac{C e^{ 2 x^2 }}{x}
+\end{equation*} 
+\begin{equation*} 
+ t =  \frac{C e^{ 2 x^2 }}{x}
+\end{equation*} 
+Заметим, что $t = 0$ -- решение при $C = 0$.\\
+Пусть $C = C(x)$:
+\begin{equation*}
+t'  = t \frac{4x^2 - 1}{x} - 1 
+\end{equation*} 
+\begin{equation*}
+\left(  \frac{C e^{ 2 x^2 }}{x} \right)'  =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+\end{equation*}
+\begin{equation*}
+  \frac{(C e^{ 2 x^2 })' x - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+\end{equation*}
+\begin{equation*}
+  \frac{(C' e^{ 2 x^2 } + 4xCe^{ 2 x^2 } ) x - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+\end{equation*}
+\begin{equation*}
+  \frac{C'x e^{ 2 x^2 } + 4x^2Ce^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+\end{equation*}
+\begin{equation*}
+  \frac{C'x e^{ 2 x^2 } + 4x^2Ce^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}   =  \frac{4x^2C e^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}  - 1 
+\end{equation*}
+\begin{equation*}
+  \frac{C'e^{ 2 x^2 } }{x}   =   - 1 
+\end{equation*}
+\begin{equation*}
+  C'e^{ 2 x^2 }    =   - x 
+\end{equation*}
+\begin{equation*}
+  \int dC  =   -\int \frac{xdx}{e^{ 2 x^2 }}
+\end{equation*}
+\begin{equation*}
+  \int dC  =   - \frac{1}{4}\int \frac{d(2x^2)}{e^{ 2 x^2 }}
+\end{equation*}
+\begin{equation*}
+  \int dC  =    \frac{1}{4}\int e^{- 2 x^2} d(-2x^2)
+\end{equation*}
+\begin{equation*}
+ C  =    \frac{1}{4} e^{- 2 x^2} + A, \, A = const
+\end{equation*}
+Запишем теперь:
+\begin{equation*} 
+ t =  \frac{\left( \frac{1}{4} e^{- 2 x^2} + A \right) e^{ 2 x^2 }}{x} =  \frac{ 1 + A  e^{ 2 x^2 }}{4x}, \, A = const
+\end{equation*} 
+Обратная замена $ z = \frac{1}{t}$:
+\begin{equation*} 
+ z =    \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const
+\end{equation*} 
+\begin{equation*} 
+ y =   x + \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const
+\end{equation*} 
+и еще одно решение:
+\begin{equation*} 
+ y =   0
+\end{equation*} 
 
-
-\textit{\textbf{Ответ:}}
+\textit{\textbf{Ответ:}} $ y =   x + \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const$ и $ y =   0$.
 
 
 \newpage
