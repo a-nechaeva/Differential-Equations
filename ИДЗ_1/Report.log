@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  13 OCT 2023 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  14 OCT 2023 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1388,12 +1388,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--452
  []
 
 
+Overfull \hbox (18.34848pt too wide) detected at line 478
+\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cm
+m/m/it/10 y[]\OT1/cmr/m/n/10 )[]2\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/
+n/10 1) + 2\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/1
+0 + \OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )[] = 2\OML/cmm/m/it/10 y\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )[
+](\OML/cmm/m/it/10 x[]y[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/
+10 ^^@ \OT1/cmr/m/n/10 1) + (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it
+/10 y[]\OT1/cmr/m/n/10 )[]2\OML/cmm/m/it/10 yx[]
+ []
+
+
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 463--465
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
 
  []
 
@@ -1413,7 +1426,7 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Here is how much of TeX's memory you used:
  51718 strings out of 475734
  1292655 string characters out of 5786229
- 1985116 words of memory out of 5000000
+ 1985115 words of memory out of 5000000
  71821 multiletter control sequences out of 15000+600000
  533734 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1437,7 +1450,7 @@ ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/te
 xmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/f
 onts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1
 /public/cm-super/sfti1200.pfb>
-Output written on Report.pdf (10 pages, 289180 bytes).
+Output written on Report.pdf (10 pages, 290891 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  128 compressed objects within 2 object streams
