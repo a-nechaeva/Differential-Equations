@@ -150,6 +150,7 @@
 (xy^2+1)yx' + 2x = 0, \, x > 0, \, y > 0
 \end{equation*}
 к однородному и решить его. Записать ответ в виде $F(x, y) = C$.\\
+\\
 \textit{\textbf{Решение:}}\\
 Пусть $x=z^m, \, y = z$, тогда $x'=mz'z^{m-1}$, запишем получившееся уравнение:
 \begin{equation*}
@@ -208,7 +209,7 @@ t'y = \frac{t}{t^{-2}+ 1} - t
 -t(t^{-2}+ 1) \, dt  = \frac{dy}{y}
 \end{equation*}
 \begin{equation*}
--(t^{-1} + t) \, dt  = \frac{dy}{y}
+- \int (t^{-1} + t) \, dt  = \int \frac{dy}{y}
 \end{equation*}
 \begin{equation*}
 - \ln t - \frac{t^2}{2}  = \ln y + C
@@ -243,9 +244,60 @@ t'y = \frac{t}{t^{-2}+ 1} - t
 y' = \frac{2y}{x \ln x} + \frac{1}{x}, \, x > 1\\
 \end{equation*}
 \textit{\textbf{Решение:}}\\
+Решим уравнение:
+\begin{equation*}
+y' = \frac{2y}{x \ln x}, \, x > 1\\
+\end{equation*}
+\begin{equation*}
+\frac{dy}{dx} = \frac{2y}{x \ln x}, \, x > 1\\
+\end{equation*}
+\begin{equation*}
+\frac{dy}{2y} = \frac{dx}{x \ln x}, \, \, y \neq 0
+\end{equation*}
+Заметим, что $y = 0$ также является решение уравнения $y' = \frac{2y}{x \ln x}$.
+\begin{equation*}
+ \int \frac{dy}{2y} = \int \frac{dx}{x \ln x}
+\end{equation*}
+\begin{equation*}
+  \frac{1}{2} \ln |y| = \int \frac{d \ln x}{\ln x}
+\end{equation*}
+\begin{equation*}
+  \frac{1}{2} \ln |y| = \ln \ln x + \ln C
+\end{equation*}
+\begin{equation*}
+  \ln |y| =2 \ln C \ln x
+\end{equation*}
+\begin{equation*}
+  y = C e^{ \ln ^2 x}
+\end{equation*}
+\begin{equation*}
+  y = C  \ln ^2 x
+\end{equation*}
+Метод вариации произвольной постоянной -- примим $C = C(x)$ и подставим в исходное уравнение:
+\begin{equation*}
+C' \ln ^2 x + 2C \ln x \frac{1}{x}= \frac{2 C  \ln ^2 x}{x \ln x} + \frac{1}{x}
+\end{equation*}
+\begin{equation*}
+C' \ln ^2 x =  \frac{1}{x}
+\end{equation*}
+\begin{equation*}
+\int dC  = \int \ln ^{-2} x  \,\frac{dx}{x} 
+\end{equation*}
+\begin{equation*}
+\int dC  = \int \ln ^{-2} x \, d \ln x
+\end{equation*}
+\begin{equation*}
+C  =  - \ln ^{-1} x + A, \, A = const
+\end{equation*}
+В итоге получим:
+\begin{equation*}
+  y = (A - \ln ^{-1} x  )  \ln ^2 x, \, A = const
+\end{equation*}
+\begin{equation*}
+  y = A\ln ^2 x - \ln x , \, A = const
+\end{equation*}
 
-
-\textit{\textbf{Ответ:}}
+\textit{\textbf{Ответ:}} $  y = A\ln ^2 x - \ln x , \, A = const$
 
 \newpage
 \section{}
