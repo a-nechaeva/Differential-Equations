@@ -476,16 +476,59 @@ Q = x^2y^2+x^3 - 1
 \begin{equation*}
   {\alpha} (x+y^2)^{\alpha - 1}  2y(x + y^2 - 1) + 2y(x+y^2)^{\alpha}  = 2y{\alpha} (x+y^2)^{\alpha - 1} ( x^2y^2+x^3 - 1)  +  (x+y^2)^{\alpha}  2yx^2
 \end{equation*}
+\begin{equation*}
+ \bcancel{ 2y (x+y^2)^{\alpha - 1}} ( {\alpha}(x + y^2 - 1) +(x+y^2)) =  \bcancel{ 2y (x+y^2)^{\alpha - 1}}({\alpha} ( x^2y^2+x^3 - 1)  +  (x+y^2)x^2)
+\end{equation*}
+\begin{equation*}
+  {\alpha}(x + y^2 - 1) +x+y^2 =  {\alpha} ( x^2y^2+x^3 - 1)  +  x^3+y^2x^2
+\end{equation*}
+\begin{equation*}
+  {\alpha}(x + y^2 - 1 - x^2y^2-x^3 + 1) =    x^3+y^2x^2 -x-y^2 
+\end{equation*}
+\begin{equation*}
+  {\alpha}(x + y^2  - x^2y^2-x^3 ) =    x^3+y^2x^2 -x-y^2 
+\end{equation*}
+\begin{equation*}
+  {\alpha} = -1
+\end{equation*}
+Полученный интегральный множитель: $\mu = \frac{1}{x+y^2}$:
+\begin{equation*}
+2y\frac{x + y^2 - 1}{x+y^2}dy + \frac{x^2y^2+x^3 - 1}{x+y^2} dx = 0
+\end{equation*}
+Получено уравнение в полных дифференциалах вида:
+\begin{equation*}
+\frac{\partial F}{\partial y}dy + \frac{\partial F}{\partial x}dx = 0
+\end{equation*}
 
+\begin{multline*}
+F = \int \frac{x^2y^2+x^3 - 1}{x+y^2} dx = \int \frac{x^2(y^2+x) - 1}{x+y^2} dx = \int x^2 dx - \int \frac{1}{x+y^2} dx =\\
+= \frac{x^3}{3} - \ln |x + y^2| + C
+\end{multline*}
+Пусть $C = C(y)$:
+\begin{equation*}
+\frac{\partial F}{\partial y} = -\frac{2y}{x + y^2} + C'_y
+\end{equation*}
+\begin{equation*}
+2y\frac{x + y^2 - 1}{x+y^2} =  -\frac{2y}{x + y^2} + C'_y
+\end{equation*}
+\begin{equation*}
+2y - \frac{ 2y}{x+y^2} =  -\frac{2y}{x + y^2} + C'_y
+\end{equation*}
+\begin{equation*}
+  C'_y = 2y
+\end{equation*}
+\begin{equation*}
+\int  dC= \int 2ydy
+\end{equation*}
+\begin{equation*}
+  C = y^2 + A, \, \, A = const
+\end{equation*}
 
+\begin{equation*}
+F = \frac{x^3}{3} - \ln |x + y^2| +  y^2 + A, \, \, A = const
+\end{equation*}
 
-
-
-
-
-
-
-\textit{\textbf{Ответ:}}
+\textit{\textbf{Ответ:}} $F = \frac{x^3}{3} - \ln |x + y^2| +  y^2 + A, \, \, A = const$
 
 
 
@@ -587,12 +630,6 @@ x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}
 \end{equation*}
 
 \textit{\textbf{Ответ:}} $x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}$
-
-
-\begin{equation*}
-\frac{\partial F}{\partial x} =  2x - \frac{1}{x^2y}
-\end{equation*}
-
 
 
 \end{document}
