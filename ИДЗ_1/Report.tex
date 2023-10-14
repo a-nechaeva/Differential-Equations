@@ -504,9 +504,89 @@ Q = x^2y^2+x^3 - 1
 2x = \frac{y}{y'} + \ln (yy'), \, y >0\\
 \end{equation*}
 \textit{\textbf{Решение:}}\\
+Введем параметр $p = y'$, сразу запишем $p = \frac{dy}{dx}, \, \, dy = pdx, \, \, dx = \frac{dy}{p}$:
+\begin{equation*}
+2x = \frac{y}{p} + \ln (yp)
+\end{equation*}
+Продифференцируем полученное выражение:
+\begin{equation*}
+2dx = d\frac{y}{p} + d\ln (yp)
+\end{equation*}
+\begin{equation*}
+2dx = \frac{pdy - ydp}{p^2} + \frac{pdy + ydp}{yp}
+\end{equation*}
+\begin{equation*}
+2\frac{dy}{p} = \frac{pdy - ydp}{p^2} + \frac{pdy + ydp}{yp}
+\end{equation*}
+\begin{equation*}
+2dy = \frac{pdy - ydp}{p} + \frac{pdy + ydp}{y}
+\end{equation*}
+\begin{equation*}
+2dy =dy - \frac{ydp}{p} + dp +\frac{pdy}{y}
+\end{equation*}
+Сгруппируем по дифференциалам:
+\begin{equation*}
+\left( 1 - \frac{p}{y} \right) dy = \left(1 - \frac{y}{p} \right) dp
+\end{equation*}
+Замена: $t = \frac{y}{p}, \, \, y = tp, \, \, dy = pdt + tdp$
+\begin{equation*}
+\left( 1 - \frac{1}{t} \right) ( pdt + tdp) = \left(1 - t \right) dp
+\end{equation*}
+\begin{equation*}
+ pdt + tdp - \frac{ pdt}{t}  - dp = dp  - t dp
+\end{equation*}
+Сгруппируем по дифференциалам:
+\begin{equation*}
+ p \left(1  - \frac{ 1}{t} \right) dt  = 2 (1  - t) dp
+\end{equation*}
+Получено уравнение с разделяющимися переменными
+\begin{equation*}
+ p \left(1  - \frac{ 1}{t} \right) dt  = 2 (1  - t) dp \, \left| : p (1  - t) \neq 0 \right.
+\end{equation*}
+Заметим, что $p = 0$ не является решением ???А ТЭ??
+\begin{equation*}
+  \left(1  - \frac{ 1}{t} \right) \frac{1}{ (1  - t) } dt  =  \frac{2}{p} dp 
+\end{equation*}
+\begin{equation*}
+ - \frac{1}{ t } dt  =  \frac{2}{p} dp 
+\end{equation*}
+\begin{equation*}
+ - \int \frac{1}{ t } dt  = \int \frac{2}{p} dp 
+\end{equation*}
+\begin{equation*}
+ - \ln | t| + C  = 2 \ln| p|
+\end{equation*}
+\begin{equation*}
+ \ln \frac{C}{t}  =  \ln p^2
+\end{equation*}
+\begin{equation*}
+  \frac{C}{t}  =   p^2
+\end{equation*}
+\begin{equation*}
+  \frac{Cp}{y}  =   p^2
+\end{equation*}
+\begin{equation*}
+  \frac{C}{y}  =   p
+\end{equation*}
 
+\begin{equation*}
+ y   =   \frac{C}{p}
+\end{equation*}
+Теперь найдем $x(p)$:
+\begin{equation*}
+2x = \frac{y}{p} + \ln (yp)
+\end{equation*}
+\begin{equation*}
+2x = \frac{ y}{ \frac{C}{y}} + \ln ( y  \frac{C}{y})
+\end{equation*}
+\begin{equation*}
+2x = \frac{ y^2}{C} + \ln  C
+\end{equation*}
+\begin{equation*}
+x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}
+\end{equation*}
 
-\textit{\textbf{Ответ:}}
+\textit{\textbf{Ответ:}} $x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}$
 
 
 \begin{equation*}
