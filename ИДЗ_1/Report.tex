@@ -331,114 +331,92 @@ x^3 - 2Cx^3 + x^3C^2 = 0
 x(z' + 1) = x^3 + (1 - 2x^2)(x + z) + x(x + z)^2
 \end{equation*}
 \begin{equation*}
-xz' + x = x^3 + x - 2x^3 + z - 2zx^2 + x^3 -2zx^2 +x z^2
+xz' + x = x^3 + x - 2x^3 + z - 2zx^2 + x^3 +2zx^2 +x z^2
 \end{equation*}
 \begin{equation*}
-xz'  =  z - 4zx^2 +x z^2
+xz'  =  z +x z^2 \, \left| \right. : x \neq 0
 \end{equation*}
-\begin{equation*}
-xz'  =  z (1 - 4x^2) +x z^2 \, \left| \right. : x \neq 0 
-\end{equation*}
+
 \textit{Заметим, что x = 0 не является решением уравнения, т.к. не обращает его в тождество}.
 \begin{equation*}
-z'  =  \frac{z}{x}(1 - 4x^2) + z^2 
+z'  =  \frac{z}{x} + z^2 
 \end{equation*} 
 Получено уравнение Бернулли вида $y' = q(x)y + p(x) y^n$.
 \begin{equation*}
-z'  =  \frac{z}{x}(1 - 4x^2) + z^2  \, \left| \right. :  z^2 \neq 0 
+z'  =  \frac{z}{x} + z^2  \, \left| \right. :  z^2 \neq 0 
 \end{equation*} 
 Заметим, что $z = 0$ -- тоже решение.
 \begin{equation*}
- \frac{z'}{ z^2}  =  \frac{1}{zx}(1 - 4x^2) + 1 
+ \frac{z'}{ z^2}  =  \frac{1}{zx} + 1 
 \end{equation*} 
 Замена: $t = \frac{1}{z}$ и $t' = - \frac{z'}{z^2}$:
 \begin{equation*}
--t'  =  \frac{t}{x}(1 - 4x^2) + 1 
+-t'  =  \frac{t}{x} + 1 
 \end{equation*} 
 Получено линейное уравнение. Решим его методом вариации произвольной постоянной:
 \begin{equation*}
-t'  =  \frac{t}{x}( 4x^2 - 1) 
+t'  =  -\frac{t}{x}
 \end{equation*} 
 \begin{equation*}
- \frac{dt}{dx}  =  \frac{t}{x}( 4x^2 - 1) 
+ \frac{dt}{dx}  = - \frac{t}{x} \, \left| \right. :  t \neq 0 
 \end{equation*} 
 \begin{equation*}
- \frac{dt}{t}  = ( 4x^2 - 1) \frac{dx}{x} \, \left| \right. :  t \neq 0 
+ \frac{dt}{t}  = - \frac{dx}{x} 
 \end{equation*} 
 Заметим, что $t = 0$ -- тоже решение.
 \begin{equation*}
- \int \frac{dt}{t}  =  4 \int x dx -  \int \frac{dx}{x} 
+ \int \frac{dt}{t}  =   -  \int \frac{dx}{x} 
 \end{equation*} 
 \begin{equation*} 
- \ln |t|  =  2 x^2  -  \ln |x| + \ln C
+ \ln |t|  =   -  \ln |x| + \ln C
 \end{equation*} 
 \begin{equation*} 
- \ln |t|  =  2 x^2  -  \ln Cx
+ \ln |t|  =   -  \ln Cx
 \end{equation*} 
 \begin{equation*} 
- \ln |t|  = \ln e^{ 2 x^2 } -  \ln Cx
+ \ln |t|  = \ln \frac{C }{x}
 \end{equation*} 
 \begin{equation*} 
- \ln |t|  = \ln \frac{C e^{ 2 x^2 }}{x}
-\end{equation*} 
-\begin{equation*} 
- t =  \frac{C e^{ 2 x^2 }}{x}
+ t =  \frac{C }{x}
 \end{equation*} 
 Заметим, что $t = 0$ -- решение при $C = 0$.\\
 Пусть $C = C(x)$:
 \begin{equation*}
-t'  = t \frac{4x^2 - 1}{x} - 1 
+t'  = -\frac{t}{x} - 1 
 \end{equation*} 
 \begin{equation*}
-\left(  \frac{C e^{ 2 x^2 }}{x} \right)'  =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+\left(  \frac{C}{x} \right)'  = - \frac{C}{x^2} - 1 
 \end{equation*}
 \begin{equation*}
-  \frac{(C e^{ 2 x^2 })' x - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+  \frac{C' x - C }{x^2}   =  - \frac{C}{x^2} - 1
 \end{equation*}
 \begin{equation*}
-  \frac{(C' e^{ 2 x^2 } + 4xCe^{ 2 x^2 } ) x - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+  \frac{C'}{x}   =   - 1 
 \end{equation*}
 \begin{equation*}
-  \frac{C'x e^{ 2 x^2 } + 4x^2Ce^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}   =  \frac{C e^{ 2 x^2 }}{x} \frac{4x^2 - 1}{x} - 1 
+ \int dC   =   -\int xdx 
 \end{equation*}
 \begin{equation*}
-  \frac{C'x e^{ 2 x^2 } + 4x^2Ce^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}   =  \frac{4x^2C e^{ 2 x^2 } - C e^{ 2 x^2 }}{x^2}  - 1 
+  C  =   - \frac{x^2}{2} + A, \, \, A = const
 \end{equation*}
-\begin{equation*}
-  \frac{C'e^{ 2 x^2 } }{x}   =   - 1 
-\end{equation*}
-\begin{equation*}
-  C'e^{ 2 x^2 }    =   - x 
-\end{equation*}
-\begin{equation*}
-  \int dC  =   -\int \frac{xdx}{e^{ 2 x^2 }}
-\end{equation*}
-\begin{equation*}
-  \int dC  =   - \frac{1}{4}\int \frac{d(2x^2)}{e^{ 2 x^2 }}
-\end{equation*}
-\begin{equation*}
-  \int dC  =    \frac{1}{4}\int e^{- 2 x^2} d(-2x^2)
-\end{equation*}
-\begin{equation*}
- C  =    \frac{1}{4} e^{- 2 x^2} + A, \, A = const
-\end{equation*}
+
 Запишем теперь:
 \begin{equation*} 
- t =  \frac{\left( \frac{1}{4} e^{- 2 x^2} + A \right) e^{ 2 x^2 }}{x} =  \frac{ 1 + A  e^{ 2 x^2 }}{4x}, \, A = const
+ t =  \frac{A -  \frac{x^2}{2}}{x} =  \frac{  A}{x} -  \frac{ x}{2} , \, \, A = const
 \end{equation*} 
 Обратная замена $ z = \frac{1}{t}$:
 \begin{equation*} 
- z =    \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const
+ z =  \frac{2x}{2A - x^2} , \, \, A = const
 \end{equation*} 
 \begin{equation*} 
- y =   x + \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const
+ y =   x +  \frac{2x}{2A - x^2} , \, \,  A = const
 \end{equation*} 
 и еще одно решение:
 \begin{equation*} 
  y =   0
 \end{equation*} 
 
-\textit{\textbf{Ответ:}} $ y =   x + \frac{4x }{  1 + A  e^{ 2 x^2 }}, \, A = const$ и $ y =   0$.
+\textit{\textbf{Ответ:}} $ y =   x + \frac{2x}{2A - x^2}, \, A = const$ и $ y =   0$.
 
 
 \newpage
