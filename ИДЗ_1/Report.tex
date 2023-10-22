@@ -41,7 +41,7 @@
 	}}
 	\renewcommand{\headrulewidth}{0pt}
 }
-
+\usepackage{comment}
 % Математика
 \usepackage{epigraph}
 \usepackage{cancel}
@@ -296,7 +296,27 @@ C  =  - \ln ^{-1} x + A, \, A = const
 \begin{equation*}
   y = A\ln ^2 x - \ln x , \, A = const
 \end{equation*}
+Проверим полученный результат, возпользовавшись формулой общего решения линейного уравнения:
+\begin{equation*}
+  y = \left( A + \int q(x) e^{\int p(x) dx} dx \right) e^{-\int p(x) dx}
+\end{equation*}
+\begin{equation*}
+  y = \left( A + \int \frac{1}{x} e^{-\int \frac{2}{x \ln x} dx} dx \right) e^{\int \frac{2}{x \ln x}  dx}
+\end{equation*}
+\begin{equation*}
+  y = \left( A + \int \frac{1}{x} e^{-2\ln \ln x + B} dx \right) e^{2\ln \ln x + B}, \, \, B =const
+\end{equation*}
+\begin{equation*}
+  y = \left( A + \int \frac{1}{x B \ln ^2 x} dx \right)B \ln ^2 x 
+\end{equation*}
+\begin{equation*}
+  y = \left( A  - \frac{1}{ B \ln x} \right)B \ln ^2 x 
+\end{equation*}
 
+\begin{equation*}
+  y = AB  \ln ^2 x   - \ln x
+\end{equation*}
+\\
 \textit{\textbf{Ответ:}} $  y = A\ln ^2 x - \ln x , \, A = const$
 
 \newpage
@@ -353,6 +373,71 @@ z'  =  \frac{z}{x} + z^2  \, \left| \right. :  z^2 \neq 0
 \begin{equation*}
 -t'  =  \frac{t}{x} + 1 
 \end{equation*} 
+Получено линейное уравнение. Решим его методом интегрирующего множителя:
+\begin{equation*}
+\left(   \frac{t}{x} + 1  \right) dx + dt = 0
+\end{equation*}
+\begin{equation*}
+P =  \frac{t}{x} + 1
+\end{equation*}
+\begin{equation*}
+Q = 1
+\end{equation*}
+\begin{equation*}
+\left( \mu P \right)'_t = \left( \mu Q \right)'_x
+\end{equation*}
+\begin{equation*}
+ \mu'_t P + \mu P'_t = \mu'_x Q  +  \mu Q'_x
+\end{equation*}
+\begin{equation*}
+ \mu'_t  \left(   \frac{t}{x} + 1  \right) +  \frac{\mu}{x} = \mu'_x 
+\end{equation*}
+Пусть $\mu = \mu(x)$, тогда $\mu'_t = 0$:
+\begin{equation*}
+ \frac{\mu}{x} = \mu'_x  \, \left| \right. :  \mu \neq 0 
+\end{equation*}
+\begin{equation*}
+ \int \frac{dx}{ x}  = \int \frac{d\mu}{\mu} 
+\end{equation*} 
+\begin{equation*}
+ \ln |x|  = \ln |\mu| + C 
+\end{equation*} 
+Интегрирующий множитель: $\mu = x$:
+\begin{equation*}
+x \left(   \frac{t}{x} + 1  \right) dx + x dt = 0
+\end{equation*}
+\begin{equation*}
+\left(  t + x \right) dx + x dt = 0
+\end{equation*}
+Получено уравнение в полных дифференциалах вида:
+\begin{equation*}
+\frac{\partial F}{\partial x}dx + \frac{\partial F}{\partial t}dt = 0
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial F}{\partial t} = x
+\end{equation*}
+\begin{equation*}
+\int \partial F = \int x \partial t \, \, \to \, \, F = xt + C(x)
+\end{equation*}
+\begin{equation*}
+\frac{\partial F}{\partial x} = t + C' =  t + x  \, \, \to \, \, C = \frac{x^2}{2} + A, \, A = const
+\end{equation*}
+В итоге получаем:
+\begin{equation*}
+F =  xt +  \frac{x^2}{2} + A
+\end{equation*}
+Обратная замена $t = \frac{1}{z}$:
+\begin{equation*}
+F =   \frac{x}{z} +  \frac{x^2}{2} + A
+\end{equation*}
+И $ z = y - x$:
+\begin{equation*}
+F =   \frac{x}{y - x} +  \frac{x^2}{2} + A
+\end{equation*}
+
+\textit{\textbf{Ответ:}} $ \frac{x}{y - x} +  \frac{x^2}{2}  = -A, \, A = const$  , $ y =   0$ и $y = x$ -- тоже решения.
+\begin{comment}
 Получено линейное уравнение. Решим его методом вариации произвольной постоянной:
 \begin{equation*}
 t'  =  -\frac{t}{x}
@@ -416,8 +501,8 @@ t'  = -\frac{t}{x} - 1
  y =   0
 \end{equation*} 
 
-\textit{\textbf{Ответ:}} $ y =   x + \frac{2x}{2A - x^2}, \, A = const$ и $ y =   0$.
-
+\textit{\textbf{Ответ:}} $ y =   x + \frac{2x}{2A - x^2}, \, A = const$ , $ y =   0$ и $y = x$ -- тоже решения.
+\end{comment}
 
 \newpage
 \section{}
@@ -564,7 +649,27 @@ F = \frac{x^3}{3} - \ln |x + y^2| +  y^2 + A, \, \, A = const
 \begin{equation*}
  p \left(1  - \frac{ 1}{t} \right) dt  = 2 (1  - t) dp \, \left| : p (1  - t) \neq 0 \right.
 \end{equation*}
-Заметим, что $p = 0$ не является решением ???А ТЭ??
+Заметим, что $p = 0$ не является решением.\\
+Проверим $t = 1$:
+\begin{equation*}
+ t = 1 \, \to  \frac{y}{y'} = 1 \, \to y = y' \, \to y = B e^x, \, B = const
+\end{equation*}
+Подставим в исходное дифференциальное уравнение:
+\begin{equation*}
+2x = \frac{ B e^x}{ B e^x} + \ln ( B^2 e^x)
+\end{equation*}
+\begin{equation*}
+2x = 1 + \ln B^2 + x
+\end{equation*}
+\begin{equation*}
+x = 1 + \ln B^2
+\end{equation*}
+-- тоже решение.
+
+
+
+
+
 \begin{equation*}
   \left(1  - \frac{ 1}{t} \right) \frac{1}{ (1  - t) } dt  =  \frac{2}{p} dp 
 \end{equation*}
@@ -606,9 +711,49 @@ F = \frac{x^3}{3} - \ln |x + y^2| +  y^2 + A, \, \, A = const
 \begin{equation*}
 x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}
 \end{equation*}
+Проверка на наличие особых решений.\\
+Найдем $p-$дискриминантную кривую:
+\begin{equation*}
+F(x, y, y')= \frac{y}{y'}+\ln (yy') - 2x
+\end{equation*}
+\begin{equation*}
+\frac{\partial F}{\partial y'} = - \frac{y}{y'^2} + \frac{1}{y'}  = 0 \, \, \to  1  =  \frac{y}{y'} \, \, \to y' = y
+\end{equation*}
+Подставим полученное выражение для $y'$ в исходное уравнение:
+\begin{equation*}
+2x = \frac{y}{y} + \ln (y^2) \, \, \to 2x = 1 + 2\ln (y) \, \, \to y = e^{x - 0.5}
+\end{equation*}
 
-\textit{\textbf{Ответ:}} $x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}$
+Полученная кривая --  $p-$дискриминантную кривая.\\
+Проверим, является ли она решением:
+\begin{equation*}
+2x = \frac{e^{x-0.5}}{e^{x- 0.5}} + \ln (e^{2x- 1}) \, \, \to 2x  = 1 + 2x - 1
+\end{equation*}
+$p-$дискриминантную кривая является решением исходного дифференциального уравнения.\\
+Выразим дискриминантную кривую через $x$:
+\begin{equation*}
+ y = e^{x - 0.5} \, \, \to \, \,  x = \ln y + 0.5
+\end{equation*}
 
+
+\begin{equation*}
+   \frac{ y_0^2}{2C} +  \frac {\ln  C}{2}  = \ln y_0 + 0.5 \, \, \to y_0 = \sqrt{ C}
+\end{equation*}
+
+\begin{equation*}
+   \frac{ y_0}{C}   = \frac{1}{y_0} \, \, \to y_0^2 =  C
+\end{equation*}
+В каждой точке дискриминантной кривой её касается другая кривая семейства: $x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}$, для которой $C=y^2$, значит, $x = \ln y + 0.5 $ является особым решением.\\
+
+
+
+
+\begin{figure}[h]
+\center{\includegraphics[width=1\linewidth]{int.png}}
+\caption{Интегральные кривые и кривая особого решения (оранжевая)}
+\end{figure}
+
+\textit{\textbf{Ответ:}} $x = \frac{ y^2}{2C} +  \frac {\ln  C}{2}$,  $x = \ln y + 0.5 $ -- особое решение.
 
 \end{document}
 
