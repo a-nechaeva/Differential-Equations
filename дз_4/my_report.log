@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  26 NOV 2023 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  26 NOV 2023 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,9 +1370,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.203 \end{equation}
+l.202 \end{equation}
                      [1]
-Overfull \hbox (38.02136pt too wide) detected at line 248
+Overfull \hbox (38.02136pt too wide) detected at line 247
  []$[]   [] []\OML/cmm/m/it/10 dy \OT1/cmr/m/n/10 = [] = [] [] [] = [] =$ 
  []
 
@@ -1388,7 +1388,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
@@ -1398,7 +1398,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
@@ -1445,7 +1445,7 @@ m-super/sfrm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 rm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 ><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on my_report.pdf (7 pages, 251783 bytes).
+Output written on my_report.pdf (7 pages, 251445 bytes).
 PDF statistics:
  207 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams
