@@ -149,6 +149,112 @@
 \begin{equation}
 \left( y' + 2y \right) y'' = y'^2
 \end{equation}
+1. Понижение порядка. Замена: $y'=p, \, \, y''=p'p$:
+\begin{equation}
+\left( p + 2y \right) p'p = p^2 \, \left|\, \, : p \neq 0 \right.
+\end{equation}
+Заметим, что $p=0$ -- тоже решение.
+\begin{equation}
+\left( p + 2y \right) p' = p
+\end{equation}
+\begin{equation}
+\left( p + 2y \right) \frac{dp}{dy} = p
+\end{equation}
+\begin{equation}
+\left( p + 2y \right) dp = pdy
+\end{equation}
+2. Получено однородное уравнение. Воспользуемся подстановкой: $p = vy \, \to \, dp=vdy+ydv$
+\begin{equation}
+\left( vy + 2y \right) \left(  vdy+ydv \right) =  vydy
+\end{equation}
+\begin{equation}
+y\left( v + 2 \right) \left(  vdy+ydv \right) =  vydy  \, \left|\, \, : y \neq 0 \right.
+\end{equation}
+Заметим, что $y=0$ -- тоже решение??????
+\begin{equation}
+\left( v + 2 \right) \left(  vdy+ydv \right) =  vdy 
+\end{equation}
+\begin{equation}
+v^2dy+2vdy+vydv+2ydv=vdy
+\end{equation}
+\begin{equation}
+v^2dy+vdy+vydv+2ydv=0
+\end{equation}
+\begin{equation}
+(v^2+v)dy=-y(v+2)dv  \, \left|\, \, : y (v^2+v) \neq 0 \right.
+\end{equation}
+Заметим, что $v^2+v = 0, \, v = -1$ -- тоже решение??????
+\begin{equation}
+\int \frac{dy}{y} = -\int \frac{v+2}{v^2+v}dv
+\end{equation}
+\begin{multline}
+\int \frac{v+2}{v^2+v}dv = \int \frac{dv}{v+1} + 2\int \frac{dv}{v^2+v} = \int \frac{dv}{v+1} + 2\left(-\int \frac{dv}{v+1}+ \int \frac{dv}{v} \right) = \\
+= 2 \ln |v| - \ln |v+1| + C = \ln C \frac{v^2}{v+1}
+\end{multline}
+\begin{equation}
+\ln y = -\ln C \frac{v^2}{v+1}
+\end{equation}
+\begin{equation}
+Cy = \frac{v + 1}{v^2}
+\end{equation}
+3. Вернемся к переменной $p$: $v = \frac{p}{y}$
+\begin{equation}
+Cy = \frac{\frac{p}{y} + 1}{\left(\frac{p}{y} \right)^2}
+\end{equation}
+\begin{equation}
+Cy = \frac{\left(\frac{p}{y} + 1 \right) y^2}{p^2}
+\end{equation}
+\begin{equation}
+Cy = \frac{y}{p} + \frac{y^2}{p^2}
+\end{equation}
+\begin{equation}
+Cy = \frac{y}{y'} + \frac{y^2}{(y')^2}
+\end{equation}
+\begin{equation}
+Cy(y')^2 = yy' + y^2
+\end{equation}
+\begin{equation}
+C(y')^2 - y' - y = 0
+\end{equation}
+Решим, как квадратное уравнение относительно $y'$
+\begin{equation}
+\sqrt{D} = \sqrt{1 + 4yC}
+\end{equation}
+\begin{equation}
+y'_1 = \frac{-b - \sqrt{D}}{2a} = \frac{1 - \sqrt{1 + 4yC}}{2C}
+\end{equation}
+\begin{equation}
+y'_2 = \frac{-b + \sqrt{D}}{2a} = \frac{1 + \sqrt{1 + 4yC}}{2C}
+\end{equation}
+В общем виде:
+\begin{equation}
+y'  = \frac{1 \pm \sqrt{1 + 4yC}}{2C}
+\end{equation}
+\begin{equation}
+\frac{dy}{dx}  = \frac{1 \pm \sqrt{1 + 4yC}}{2C}
+\end{equation}
+\begin{equation}
+  \frac{2C}{1 \pm \sqrt{1 + 4yC}} dy = dx
+\end{equation}
+\begin{equation}
+ \int  \frac{2C}{1 \pm \sqrt{1 + 4yC}} dy = \int dx
+\end{equation}
+\begin{multline}
+ \int  \frac{2C}{1 \pm \sqrt{1 + 4yC}} dy = \left|  \begin{cases} u = 4yC + 1, \\
+y = \frac{u-1}{4C},\\
+dy = \frac{du}{4C}  \end{cases} \right| = \frac{1}{2} \int \frac{du}{\pm \sqrt{u} + 1} =  \left|  \begin{cases} w = \pm \sqrt{u} + 1, \\
+dw = \pm \frac{1}{2}\frac{du}{\sqrt{u}}  \end{cases} \right| =\\=
+ \int dw - \int \frac{dw}{w} = \pm \sqrt{4yC + 1} + 1 - \ln \left( \pm \sqrt{4yC + 1} + 1 \right) + A
+\end{multline}
+\begin{equation}
+ \pm \sqrt{4yC + 1} + 1 - \ln \left( \pm \sqrt{4yC + 1} + 1 \right) + A = x
+\end{equation}
+Объединим $1$ и $A$ и оставим предыдущее обозначение константы $A$:
+\begin{equation}
+ \pm \sqrt{4yC + 1} - \ln \left( \pm \sqrt{4yC + 1} + 1 \right) + A = x
+\end{equation}
+
+\textbf{\textit{Ответ:}} $ \pm \sqrt{4yC + 1} - \ln \left( \pm \sqrt{4yC + 1} + 1 \right) + A = x$
 
 \newpage
 \section{}
