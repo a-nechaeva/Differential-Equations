@@ -132,7 +132,7 @@
 		\vspace*{5ex}
 		
 		{\large 
-			\underline{Преподаватель}: \textit{Магазенков Егор Николаевич}
+			\underline{Преподаватель}: \textit{Магазенков Е. Н.}
 		}
 	\end{flushright}	
 	\newpage
@@ -313,6 +313,58 @@ y = C_1 + C_2e^{-x} + C_3 e^{x}
 \begin{equation}
 y' = C_1' + C_2'e^{-x} -C_2e^{-x} + C_3' e^{x}+ C_3 e^{x}
 \end{equation}
+При этом $C_1' + C_2'e^{-x}+ C_3' e^{x} = 0$.
+\begin{equation}
+y'' = -C_2'e^{-x} + C_2e^{-x} + C_3' e^{x}+ C_3 e^{x}
+\end{equation}
+При этом $- C_2'e^{-x}+ C_3' e^{x} = 0$.
+\begin{equation}
+y''' = C_2'e^{-x} - C_2e^{-x} + C_3' e^{x}+ C_3 e^{x}
+\end{equation}
+\begin{multline}
+y''' -y' = C_2'e^{-x} - C_2e^{-x} + C_3' e^{x}+ C_3 e^{x} + C_2e^{-x} - C_3 e^{x} =\\=  C_2'e^{-x}+ C_3' e^{x} = \frac{e^x}{1+e^x}
+\end{multline}
+
+\begin{equation}
+\begin{cases}
+C_1' + C_2'e^{-x}+ C_3' e^{x} = 0\\
+- C_2'e^{-x}+ C_3' e^{x} = 0\\
+C_2'e^{-x}+ C_3' e^{x} = \frac{e^x}{1+e^x}
+\end{cases}
+\to
+\begin{cases}
+C_1' + C_2'e^{-x}+ C_3' e^{x} = 0\\
+C_3' e^{2x} =  C_2'\\
+C_2'e^{-x}+ C_3' e^{x} = \frac{e^x}{1+e^x}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+C_1' = - 2C_3' e^{x}\\
+C_2' = C_3' e^{2x}\\
+ C_3'  = \frac{1}{2}\frac{1}{1+e^x}
+\end{cases}
+\to
+\begin{cases}
+C_1' = - \frac{e^x}{1+e^x}\\
+C_2' = \frac{1}{2}\frac{ e^{2x}}{1+e^x}\\
+C_3'  = \frac{1}{2}\frac{1}{1+e^x}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+C_1' = - \frac{e^x}{1+e^x}  \to C_1 = -ln(e^x+1) + A
+\end{equation}
+\begin{equation}
+C_2' = \frac{1}{2}\frac{ e^{2x}}{1+e^x}  \to C_2 = \frac{e^x - ln (e^x+1)}{2} + B
+\end{equation}
+\begin{equation}
+C_3' = \frac{1}{2}\frac{1}{1+e^x} \to C_3 = \frac{x - ln(e^x+1)}{2} + C
+\end{equation}
+\textbf{\textit{Ответ:}}\\
+$y = -ln(e^x+1) + A + \left(\frac{e^x - ln (e^x+1)}{2} + B  \right)e^{-x} + \left( \frac{x - ln(e^x+1)}{2} + C \right) e^{x}$
+
 
 \end{document}
 
